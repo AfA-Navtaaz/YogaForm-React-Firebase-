@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages{
-        stage('Build Maven'){
+        stage('Checking Out Repo'){
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/AfA-Navtaaz/YogaForm-React-Firebase-.git']]])
             }
